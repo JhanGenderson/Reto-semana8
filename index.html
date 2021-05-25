@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Persons-creator</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="mt-4">Lista de Personas</h1>
+      <button class="btn btn-primary my-3 btn-lg" id="btn-crear"> Crear Persona </button>
+        <!-- Necesito un elemento HTML para referenciar desde JS -->
+        <div class="row" id="lista">
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-crear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Crear Persona</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="form-crear">
+              <div>
+                <label>Nombre:</label>
+                <input type="text" class="form-control" name="nombre">
+              </div>
+              <div>
+                <label>Edad:</label>
+                <input type="number" class="form-control" name="edad">
+              </div>
+              <div>
+                <label>Trabajo:</label>
+                <input type="text" class="form-control" name="trabajo">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="btn-guardar">Crear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
